@@ -11,7 +11,7 @@ Para utilizar o simulador, forneça dois arquivos de entrada: um arquivo JSON co
 
 ### Exemplo de arquivo de autômato:
 `arquivo_do_automato.aut`
-
+```json
 {
     "initial": 0,
     "final": [3, 5],
@@ -26,25 +26,29 @@ Para utilizar o simulador, forneça dois arquivos de entrada: um arquivo JSON co
         {"from": 5, "read": " ", "to": 0}
     ]
 }
+```
 ### Exemplo de arquivo de entradas:
 `arquivo_de_testes.in`
-
+```
 aba  c;1
 abc;0
 a b a;0
+```
 Neste arquivo, cada linha contém uma entrada de teste e a saída esperada, separados por ";" (1 para aceita, 0 para rejeita).
 
 ### Exemplo de uso no terminal:
-`python ferramenta.py arquivo_do_automato.aut arquivo_de_testes.in arquivo_de_saida.out`
+```bash
+python ferramenta.py arquivo_do_automato.aut arquivo_de_testes.in arquivo_de_saida.out
+```
 
 ### Exemplo de arquivo de saída:
 `arquivo_de_saida.out`
-
+```
 aba  c;1;1;0.028
 abc;0;0;0.003
 a b a;0;0;0.003
 O arquivo de saída registra a entrada, a saída esperada, a saída obtida e o tempo de execução, separados por ";".
-
+```
 ##  Considerações
 Certifique-se de que os arquivos de entrada estejam no formato correto e utilize a linha de comando para executar o script. Se estiver usando um terminal diferente, adapte os comandos conforme necessário para visualizar os resultados.
 
